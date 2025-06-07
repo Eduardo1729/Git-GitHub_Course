@@ -1,0 +1,563 @@
+
+
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico
+$ git init
+Initialized empty Git repository in C:/Users/Micro/Documents/ESTUDOS/Python/Basi
+co/.git/
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        1 - Hola Mundo.py
+        2 - Variables.py
+        3 - Cadena de caracteres.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git add "1 - Hola Mundo.py"
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1 - Hola Mundo.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        2 - Variables.py
+        3 - Cadena de caracteres.py
+
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git add .
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1 - Hola Mundo.py
+        new file:   2 - Variables.py
+        new file:   3 - Cadena de caracteres.py
+
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git commit -m "commit inicial"
+[master (root-commit) cd5c594] commit inicial
+ 3 files changed, 30 insertions(+)
+ create mode 100644 1 - Hola Mundo.py
+ create mode 100644 2 - Variables.py
+ create mode 100644 3 - Cadena de caracteres.py
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git config --local user.name
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=schannel
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+filter.lfs.required=true
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+user.name=Eduardo Rojas
+user.email=prof.eduardo17@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git commit -m "commit inicial"
+On branch master
+nothing to commit, working tree clean
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   3 - Cadena de caracteres.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git add .
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   3 - Cadena de caracteres.py
+
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git commit -m "commit inicial"
+[master 2c0c36d] commit inicial
+ 1 file changed, 18 insertions(+)
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git remote add origin https://github.com/Eduardo1729/Git-GitHub_Course
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git push --set-upstream origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 909 bytes | 227.00 KiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Eduardo1729/Git-GitHub_Course/pull/new/master
+remote:
+To https://github.com/Eduardo1729/Git-GitHub_Course
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git add .
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Test.txt
+
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git commit -m "permitir fazer testes"
+[master 61f3e26] permitir fazer testes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Test.txt
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 284 bytes | 284.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Eduardo1729/Git-GitHub_Course
+   2c0c36d..61f3e26  master -> master
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git reflog
+61f3e26 (HEAD -> master, origin/master) HEAD@{0}: commit: permitir fazer testes
+2c0c36d HEAD@{1}: commit: commit inicial
+cd5c594 HEAD@{2}: commit (initial): commit inicial
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git reset --hard 2c0c36d
+HEAD is now at 2c0c36d commit inicial
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git reflog
+2c0c36d (HEAD -> master) HEAD@{0}: reset: moving to 2c0c36d
+61f3e26 (origin/master) HEAD@{1}: commit: permitir fazer testes
+2c0c36d (HEAD -> master) HEAD@{2}: commit: commit inicial
+cd5c594 HEAD@{3}: commit (initial): commit inicial
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git reset --hard 61f3e26
+HEAD is now at 61f3e26 permitir fazer testes
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git branch
+* master
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git branch staging
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git branch
+* master
+  staging
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git checkout staging
+Switched to branch 'staging'
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (staging)
+$ git branch
+  master
+* staging
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (staging)
+$ git status
+On branch staging
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Prueba de branch.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (staging)
+$ git add .
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (staging)
+$ git commit -m "probando las branch"
+[staging 7f9c61e] probando las branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Prueba de branch.json
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (staging)
+$ git status
+On branch staging
+nothing to commit, working tree clean
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (staging)
+$ git push
+fatal: The current branch staging has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin staging
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (staging)
+$ git push --set-upstream origin staging
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 260 bytes | 260.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'staging' on GitHub by visiting:
+remote:      https://github.com/Eduardo1729/Git-GitHub_Course/pull/new/staging
+remote:
+To https://github.com/Eduardo1729/Git-GitHub_Course
+ * [new branch]      staging -> staging
+branch 'staging' set up to track 'origin/staging'.
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (staging)
+$ git branch
+  master
+* staging
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (staging)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git merge staging
+Updating 61f3e26..7f9c61e
+Fast-forward
+ Prueba de branch.json | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Prueba de branch.json
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Eduardo1729/Git-GitHub_Course
+   61f3e26..7f9c61e  master -> master
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git pull
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 891 bytes | 89.00 KiB/s, done.
+From https://github.com/Eduardo1729/Git-GitHub_Course
+ * [new branch]      main       -> origin/main
+Already up to date.
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git merge staging
+Already up to date.
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git branch
+* master
+  staging
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git pull
+Already up to date.
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git checkout -b adicionar-branch-verificando master
+Switched to a new branch 'adicionar-branch-verificando'
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git branch
+* adicionar-branch-verificando
+  master
+  staging
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git status
+On branch adicionar-branch-verificando
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Verificador de branch.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git add .
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git status
+On branch adicionar-branch-verificando
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Verificador de branch.txt
+
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git commit -m "verificando pull y branch"
+[adicionar-branch-verificando eba1855] verificando pull y branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Verificador de branch.txt
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git branch
+  adicionar-branch-verificando
+* master
+  staging
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git pull
+Already up to date.
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git merge adicionar-branch-verificando
+Updating 7f9c61e..eba1855
+Fast-forward
+ Verificador de branch.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Verificador de branch.txt
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 271 bytes | 271.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Eduardo1729/Git-GitHub_Course
+   7f9c61e..eba1855  master -> master
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (master)
+$ git checkout adicionar-branch-verificando
+Switched to branch 'adicionar-branch-verificando'
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git add .
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git commit -m "comprobando pull request"
+[adicionar-branch-verificando 044f453] comprobando pull request
+ 1 file changed, 2 insertions(+)
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git push
+fatal: The current branch adicionar-branch-verificando has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin adicionar-branch-verificando
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ ^C
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git push --set-upstream origin adicionar-branch-verificando
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 298 bytes | 298.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'adicionar-branch-verificando' on GitHub by visitin
+g:
+remote:      https://github.com/Eduardo1729/Git-GitHub_Course/pull/new/adicionar-bran
+ch-verificando
+remote:
+To https://github.com/Eduardo1729/Git-GitHub_Course
+ * [new branch]      adicionar-branch-verificando -> adicionar-branch-verificando
+branch 'adicionar-branch-verificando' set up to track 'origin/adicionar-branch-verifi
+cando'.
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git status
+On branch adicionar-branch-verificando
+Your branch is up to date with 'origin/adicionar-branch-verificando'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Ejercicios/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ touch .gitignore
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git status
+On branch adicionar-branch-verificando
+Your branch is up to date with 'origin/adicionar-branch-verificando'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git status
+On branch adicionar-branch-verificando
+Your branch is up to date with 'origin/adicionar-branch-verificando'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        fotos.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git status
+On branch adicionar-branch-verificando
+Your branch is up to date with 'origin/adicionar-branch-verificando'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git add .
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git status
+On branch adicionar-branch-verificando
+Your branch is up to date with 'origin/adicionar-branch-verificando'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git commit -m "test del git ignore"
+[adicionar-branch-verificando 1ae7bf2] test del git ignore
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 302 bytes | 302.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Eduardo1729/Git-GitHub_Course
+   044f453..1ae7bf2  adicionar-branch-verificando -> adicionar-branch-verificando
+
+Micro@DESKTOP-J2E12O2 MINGW64 ~/Documents/ESTUDOS/Python/Basico (adicionar-branch-verificando)
+$
